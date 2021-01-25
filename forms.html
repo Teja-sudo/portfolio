@@ -1,0 +1,198 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sign up page</title>
+<link rel="stylesheet" href="formproperties.css">
+</head>	
+<style>
+/*.css3-notification {
+  font-size: .8em;
+  text-align: center;
+  padding: 10px;
+  background-color: #111;
+  color: #fff;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .3);
+  text-transform: uppercase;
+  position: relative;
+  font-weight: bold;*/
+}
+.a div
+{
+text-align: centre;
+color: red;
+font-variant: small-caps;
+font-weight: bold;
+font-style: roman times;
+font-size: 25px;
+}
+</style>
+<!--<div class="css3-notification">
+  <p>Hi, this is a notification and it bounces.</p>
+</div> -->             			
+<body topmargin="100" leftmargin="50"  >
+<form name="RegForm"  onsubmit="return teja()" method="post"><fieldset style="width:250px;"><legend>sign up</legend>
+<table align="center" border=3 height="300" width="300">
+<div class="a">
+<tr> 
+<td>First Name :</td><td><input type="text" name="FName" placeholder="First Name" required /></td>
+</tr>
+<tr>
+<td>Last Name :</td><td><input type="text" size= 35 name="LName" placeholder="Last Name" required /></td>
+</tr>
+<tr>
+<td>EMail ID :</td><td><input type="text" name="EMail" placeholder="User Id" required /></td>
+</tr>
+<tr>
+<td>Create Password :</td><td><input type="password" name="Password" placeholder="password" required /></td>
+</tr>
+<tr>
+<td>Language(s)</td>
+<td><input type="checkbox" name="English" value="on" required >English</td>
+<td><input type="checkbox"  name="Hindi" value="on"  >Hindi </td>
+<td><input type="checkbox"  name="Telugu" value="on"  >Telugu<br></td>
+</tr>
+<tr>
+<td>Gender:</td>
+<td><input type="radio" name="gender" value="Male" required>Male </td>
+<td><input type="radio" name="gender" value="Female" required>Female</td>
+</tr>
+<tr>
+<select name="dropdown" required > 
+<option value=“Java" selected>Java</option>
+ <option value=“html">HTML</option>
+ </select>
+</tr>
+<tr>
+ 
+<input type="submit" name="submit" value="Submit" onclick="abc()" />
+ <input type="reset" name="reset" value="Reset" />
+ <input type="button" name="ok" value="OK" onclick="window.location.href='iconbuttons.html' "/> 
+<!--<input type="image" name="imagebutton" src=“images.jpg" />-->
+</tr>
+</div>
+</table>
+</form>
+<script>
+
+
+   
+  
+function teja()                                    
+{ 
+    var fname = document.forms["RegForm"]["FName"];               
+    var email = document.forms["RegForm"]["EMail"];    
+    //var phone = document.forms["RegForm"]["Telephone"];  
+   var lname =  document.forms["RegForm"]["LName"];  
+    var password = document.forms["RegForm"]["Password"];  
+   // var address = document.forms["RegForm"]["Address"];  
+   
+    if (fname.value == "")                                  
+    { 
+        window.alert("Please enter your name."); 
+        name.focus(); 
+        return false; 
+    } 
+   
+   /* if (address.value == "")                               
+    { 
+        window.alert("Please enter your address."); 
+        name.focus(); 
+        return false; 
+    } */
+       
+    if (email.value == "")                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf("@", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf(".", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+   /* if (phone.value == "")                           
+    { 
+        window.alert("Please enter your telephone number."); 
+        phone.focus(); 
+        return false; 
+    } */
+   
+    if (password.value == "")                        
+    { 
+        window.alert("Please enter your password"); 
+        password.focus(); 
+        return false; 
+    } 
+   
+    if (lname.value == "")                  
+    { 
+        alert("Please enter your last name."); 
+        lname.focus(); 
+        return false; 
+    } */
+	else{
+	function abc() 
+{
+    var retVal = confirm("Do you want to continue ?");
+               if( retVal == true ){
+                 // document.write ("sign up sucessful! ");
+				  //onclick="window.location.href='iconbuttons.html'";
+				//  <a href="iconbuttons.html"> </a>
+				//var a = document.createElement('a');
+				window.open("iconbuttons.html");
+				
+                  return true;
+               }
+               else{
+                  document.write ("sign up cancelled!");
+                  return false;
+               }
+	}
+	}
+	
+}</script>
+</script>
+
+</body>
+</html>
+ <script>
+     function abc() 
+{
+            var firstname = document.getElementById("First Name");
+            var lastname = document.getElementById("Last Name");
+            var mail = document.getElementById("E-Mail id");
+            var number = document.getElementById("Mobile Number");
+            var password = document.getElementById("Password");
+            var rpassword = document.getElementById("Confirm Password")
+            
+            if(firstname.value==""||lastname.value==""||mail.value==""||number.value==""||password.value==""||rpassword.Value=="")
+                {
+                    alert("No Blank Values Allowed");
+                }
+            else if(password.value!=rpassword.value)
+                {
+                    alert("password and re-entered password are not same");
+                }
+            else if(password.length<5||password.length>15)
+                {
+                    alert("password pattern doesn't match");
+                }
+            else
+                {
+                    alert("Account Created successfully");
+                    window.open("home.html");
+                }    
+}
+    </script>
